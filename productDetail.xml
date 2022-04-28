@@ -1,0 +1,50 @@
+<odoo>
+	<record id="online_pos_product_details" model="ir.ui.view">
+		<field name="name">online.pos.product.details.view</field>
+		<field name="model">online.pos.product.details</field>
+		<field name="arch" type="xml">
+		<form>
+				<sheet>
+					<group>
+						<group>
+							<field name="product_name" />	
+							<field name="grand_total"/>	 					
+							<field name="product_details_id"/>					
+						</group>
+					</group>
+				</sheet>		
+			</form>
+		
+		</field>
+	
+	</record>
+	
+	<record id="online_pos_product_details_tree" model="ir.ui.view">
+		<field name="name">online.pos.product.details.view</field>
+		<field name="model">online.pos.product.details</field>
+		<field name="arch" type="xml">
+		<tree>
+			<field name="product_name" />	
+			<field name="grand_total"/>	 					
+			<field name="product_details_id"/>	
+		</tree>
+		</field>
+	
+	</record>
+	
+	
+	<record id="online_pos_product_details" model="ir.actions.act_window">
+		<field name="name">Invoice</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">online.pos.product.details</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<menuitem id="pos_product"
+		name="Billing"
+		parent="onlinepos_root"
+		action="online_pos_product_details"
+		sequence="1"/>
+	
+
+</odoo>

@@ -1,0 +1,27 @@
+<odoo>
+<record id="onlinePOS_customize_form" model="ir.ui.view">
+		<field name="name">online.pos.customize.form</field>
+		<field name="model">online.pos.billing</field>
+		<field name="arch" type="xml">
+			<form>
+					<sheet>
+					<field name ="product_image" widget="image" class="oe_avatar"/>
+						<group>
+							<group>
+								<field name="product_name"/>
+								<field name="quantity"/>
+								<field name="price"/>
+								<field name="gst"/>
+								<field name="discount"/>
+								<field name="total"/>					
+							</group>
+						</group>
+				<!-- 		<button name='total' string='Calculate' type='object'/>
+						<button name='online_payment' string='payment' type='object'/> -->
+					</sheet>		
+			</form>
+		</field>
+	</record>
+
+ 
+</odoo>

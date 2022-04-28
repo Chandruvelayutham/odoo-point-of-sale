@@ -1,0 +1,33 @@
+<odoo>
+
+
+	<record id="onlinePOS_inventory_wizard_form" model="ir.ui.view">
+		<field name="name">online.pos.inventory.wizard.form</field>
+		<field name="model">online.pos.wizard</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<field name="set_product_image" widget="image"
+						class="oe_avatar" />
+					<group>
+						<group>
+							<field name="name" />
+							<field name="price" />
+							<field name="gst" />
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="inventory_wizard" model="ir.actions.act_window">
+		<field name="name">Inventory View</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">online.pos.wizard</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="onlinePOS_inventory_wizard_form" />
+		<field name="target">new</field>
+	</record>
+
+</odoo>
